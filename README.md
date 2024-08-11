@@ -1,2 +1,2 @@
 # AISC2024
-Knock knock, Nothing here!
+Khi nào họp dậy chời :)
