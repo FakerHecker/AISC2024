@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
-class PlantCard extends StatelessWidget {
-  const PlantCard({super.key});
+class ProductMiniCard extends StatelessWidget {
+  const ProductMiniCard({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.highlightedText,
+    required this.actionButtonIcon,
+  });
+
+  final String title, subtitle, highlightedText;
+  final IconData actionButtonIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +31,12 @@ class PlantCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            // TODO: extract properties below
             Text(
-              "Cây đuôi công",
+              title,
               style: textTheme.labelLarge,
             ),
             Text(
-              "19/08/2024",
+              subtitle,
               style: textTheme.bodySmall,
               // TODO: fix font of body
             ),
@@ -36,15 +44,17 @@ class PlantCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                // TODO: make this *shiny* ✨✨
                 Text(
                   "4 tháng",
                   style:
                       textTheme.titleMedium?.apply(color: theme.primaryColor),
                 ),
+                // TODO: add button interactivity, can split entire button widget
                 IconButton.outlined(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.favorite_outline,
+                    actionButtonIcon,
                     color: theme.primaryColor,
                   ),
                 )

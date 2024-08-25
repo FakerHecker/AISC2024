@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planta/components/plant_card.dart';
+import 'package:planta/components/product_mini_card.dart';
 
 class GardenPage extends StatelessWidget {
   const GardenPage({super.key});
@@ -30,7 +30,12 @@ class GardenPage extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(16.0),
-              child: PlantCard(),
+              child: ProductMiniCard(
+                title: 'Cây đuôi công',
+                subtitle: '19/08/2024',
+                highlightedText: "4 tháng",
+                actionButtonIcon: Icons.favorite_outline,
+              ),
             ),
             Placeholder(),
           ],
