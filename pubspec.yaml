@@ -92,6 +92,11 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
   fonts:
-     - family: Bricolage Grotesque
-       fonts:
-         - asset: assets/fonts/Bricolage Grotesque.ttf
+    - family: Bricolage Grotesque
+      fonts:
+        - asset: assets/fonts/Bricolage Grotesque.ttf
+    - family: Be Vietnam
+      fonts:
+        - asset: assets/fonts/BeVietnam-Regular.ttf
+        - asset: assets/fonts/BeVietnam-Medium.ttf
+          weight: 500
