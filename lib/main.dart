@@ -3,6 +3,8 @@ import 'package:planta/pages/garden_page/page_layout.dart';
 import 'package:planta/theme/light/light_theme.dart';
 import 'package:provider/provider.dart';
 
+import 'home/home_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
