@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../GradientText.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:planta/pages/garden_page/page_layout.dart';
+import 'package:planta/pages/home/home_view.dart';
 import 'package:planta/theme/light/light_theme.dart';
 import 'package:provider/provider.dart';
-
-import 'home/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Planta',
         theme: getLightTheme(),
-        home: const GardenPage(),
+        home: const HomePage(),
       ),
     );
   }
