@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planta/components/product_mini_card.dart';
+import 'package:planta/pages/garden_page/sheet_layout.dart';
 
 class GardenPage extends StatelessWidget {
   const GardenPage({super.key});
@@ -17,29 +18,38 @@ class GardenPage extends StatelessWidget {
           flexibleSpace: const Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              TabBar(
-                tabs: [
-                  Tab(text: 'Trong nhà'),
-                  Tab(text: 'Ngoài trời'),
-                ],
-              ),
+              TabBar(tabs: [
+                Tab(text: 'Trong nhà'),
+                Tab(text: 'Ngoài trời'),
+              ]),
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: ProductMiniCard(
-                title: 'Cây đuôi công',
-                subtitle: '19/08/2024',
-                highlightedText: "4 tháng",
-                actionButtonIcon: Icons.favorite_outline,
-              ),
+        body: TabBarView(children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ProductMiniCard(
+              title: 'Cây đuôi công',
+              subtitle: '19/08/2024',
+              highlightedText: "4 tháng",
+              actionButtonIcon: Icons.favorite_outline,
+              actionButtonOnPressed: () async {
+                await showModalBottomSheet(
+                  context: context,
+                  showDragHandle: true,
+                  builder: (context) {
+                    return const GardenSheet(
+                      title: "Cây đuôi công",
+                      subtitle: "Trong nhà",
+                      image: AssetImage("assets/images/plant-image.png"),
+                    );
+                  },
+                );
+              },
             ),
-            Placeholder(),
-          ],
-        ),
+          ),
+          const Placeholder(),
+        ]),
       ),
     );
   }

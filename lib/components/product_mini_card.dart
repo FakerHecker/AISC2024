@@ -7,10 +7,13 @@ class ProductMiniCard extends StatelessWidget {
     required this.subtitle,
     required this.highlightedText,
     required this.actionButtonIcon,
+    required this.actionButtonOnPressed,
   });
 
   final String title, subtitle, highlightedText;
   final IconData actionButtonIcon;
+
+  final void Function()? actionButtonOnPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +55,7 @@ class ProductMiniCard extends StatelessWidget {
                 ),
                 // TODO: add button interactivity, can split entire button widget
                 IconButton.outlined(
-                  onPressed: () {},
+                  onPressed: actionButtonOnPressed,
                   icon: Icon(
                     actionButtonIcon,
                     color: theme.primaryColor,
