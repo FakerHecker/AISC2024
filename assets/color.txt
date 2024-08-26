@@ -1,1 +1,33 @@
-# color: 0xFF059710, 0xB304CB01
+Đăng nhập: 0xFF059710, 0xB304CB01
+
+If you want to use the hexadecimal code of a color which is in the format #123456, then it is very easy to do. Create a variable of type Color and assign the following values to it.
+Color myHexColor = Color(0xff123456)
+// Here you notice I use the 0xff and that is the opacity or transparency
+// of the color and you can also change these values.
+Use myHexColor and you are ready to go.
+If you want to change the opacity of color direct from the hexadecimal code, then change the ff value in 0xff to the respective value from the table below. (alternatively you can use
+myHexColor.withOpacity(0.2)
+it is easier way to do it. 0.2 is mean 20% opacity)
+
+Hexadecimal opacity values
+100% — FF
+95% — F2
+90% — E6
+85% — D9
+80% — CC
+75% — BF
+70% — B3
+65% — A6
+60% — 99
+55% — 8C
+50% — 80
+45% — 73
+40% — 66
+35% — 59
+30% — 4D
+25% — 40
+20% — 33
+15% — 26
+10% — 1A
+5% — 0D
+0% — 00
