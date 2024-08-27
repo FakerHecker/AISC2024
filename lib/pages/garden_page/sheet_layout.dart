@@ -38,21 +38,21 @@ class GardenSheet extends StatelessWidget {
           const Divider(height: 32),
           // TODO: add interactivity
           MenuItemButton(
-            leadingIcon: const Icon(Icons.filter_vintage),
+            leadingIcon: const Icon(Icons.filter_vintage, size: 20),
             onPressed: () {},
             requestFocusOnHover: false,
             child: Text("Thông tin cây trồng",
                 style: Theme.of(context).textTheme.labelMedium),
           ),
           MenuItemButton(
-            leadingIcon: const Icon(Icons.calendar_today),
+            leadingIcon: const Icon(Icons.calendar_today, size: 20),
             onPressed: () {},
             requestFocusOnHover: false,
             child: Text("Lịch chăm sóc",
                 style: Theme.of(context).textTheme.labelMedium),
           ),
           MenuItemButton(
-            leadingIcon: const Icon(Icons.cancel),
+            leadingIcon: const Icon(Icons.cancel, size: 20),
             onPressed: () {},
             requestFocusOnHover: false,
             child: Text("Xóa cây ra khỏi vườn",

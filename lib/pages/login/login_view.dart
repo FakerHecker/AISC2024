@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../GradientText.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -53,10 +52,7 @@ class _LoginPage extends State<StatefulWidget> {
                       alignment: const Alignment(-0.97, 0),
                       child: GradientText(
                         'Đăng nhập',
-                        style: GoogleFonts.bricolageGrotesque(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w800,
-                        ),
+                        style: Theme.of(context).textTheme.headlineSmall,
                         gradient: const LinearGradient(colors: [
                           Color(0xFF059710),
                           Color(0xB304CB01),
@@ -73,14 +69,11 @@ class _LoginPage extends State<StatefulWidget> {
                         color: const Color(0xFFEBFEED),
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Column(
+                      child: const Column(
                         children: [
                           TextField(
                             decoration: InputDecoration(
                                 hintText: "Email hoặc số điện thoại",
-                                hintStyle: GoogleFonts.bricolageGrotesque(
-                                    color: const Color(0xCC005200),
-                                    fontWeight: FontWeight.w300),
                                 border: InputBorder.none),
                           )
                         ],
@@ -96,29 +89,22 @@ class _LoginPage extends State<StatefulWidget> {
                         color: const Color(0xFFEBFEED),
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Column(
+                      child: const Column(
                         children: [
                           TextField(
                             decoration: InputDecoration(
-                                hintText: "Mật khẩu",
-                                hintStyle: GoogleFonts.bricolageGrotesque(
-                                    fontWeight: FontWeight.w300,
-                                    color: const Color(0xCC005200)),
-                                border: InputBorder.none),
+                                hintText: "Mật khẩu", border: InputBorder.none),
                           )
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         SizedBox(
                             height: 30,
                             width: 20,
                             child: Checkbox(
-                              activeColor: const Color(0xFF005200),
                               value: isChecked,
                               onChanged: (value) {
                                 setState(() {
@@ -129,20 +115,13 @@ class _LoginPage extends State<StatefulWidget> {
                         const SizedBox(
                           width: 10,
                         ),
-                        Text(
-                          "Duy trì đăng nhập",
-                          style: GoogleFonts.bricolageGrotesque(
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
+                        const Text("Duy trì đăng nhập"),
                         const SizedBox(
                           width: 108,
                         ),
                         Text(
                           "Quên mật khẩu?",
-                          style: GoogleFonts.bricolageGrotesque(
-                              fontWeight: FontWeight.w800,
-                              color: const Color(0xFF005200)),
+                          style: Theme.of(context).textTheme.labelLarge,
                         ),
                       ],
                     ),
@@ -158,8 +137,7 @@ class _LoginPage extends State<StatefulWidget> {
                       child: Center(
                         child: Text(
                           "Đăng nhập",
-                          style: GoogleFonts.bricolageGrotesque(
-                              fontWeight: FontWeight.w800, color: Colors.white),
+                          style: Theme.of(context).textTheme.labelLarge,
                         ),
                       ),
                     ),
@@ -189,9 +167,7 @@ class _LoginPage extends State<StatefulWidget> {
                             ),
                             Text(
                               "Đăng nhập với Google",
-                              style: GoogleFonts.bricolageGrotesque(
-                                  fontWeight: FontWeight.w800,
-                                  color: const Color(0xFF005200)),
+                              style: Theme.of(context).textTheme.labelLarge,
                             ),
                           ]),
                     ),
@@ -201,19 +177,11 @@ class _LoginPage extends State<StatefulWidget> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          "Bạn chưa có tài khoản?",
-                          style: GoogleFonts.bricolageGrotesque(
-                              fontWeight: FontWeight.normal),
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
+                        const Text("Bạn chưa có tài khoản?"),
+                        const SizedBox(width: 5),
                         Text(
                           "Đăng ký",
-                          style: GoogleFonts.bricolageGrotesque(
-                              fontWeight: FontWeight.w800,
-                              color: const Color(0xFF005200)),
+                          style: Theme.of(context).textTheme.labelLarge,
                         )
                       ],
                     )

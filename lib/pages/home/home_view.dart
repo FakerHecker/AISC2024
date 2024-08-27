@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:planta/GradientText.dart';
 import 'package:planta/theme/light/color_scheme.dart';
 import 'package:planta/theme/text_theme.dart';
@@ -24,23 +23,21 @@ class _HomePage extends State<StatefulWidget> {
             children: [
               Row(
                 children: [
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Container(
                     height: 40,
                     width: 40,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("assets/images/container-profile.png")
-                        )
-                    ),
+                            image: AssetImage(
+                                "assets/images/container-profile.png"))),
                   ),
                   const SizedBox(width: 10),
                   Text(
                     "Chào Plantie 🍀",
-                    style: GoogleFonts.bricolageGrotesque(
-                      fontWeight: FontWeight.w800,
-                      fontSize: 28,
-                    ),
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ],
               ),
@@ -79,11 +76,11 @@ class _HomePage extends State<StatefulWidget> {
             padding: const EdgeInsets.only(left: 20),
             child: Text(
               "Thời tiết hôm nay",
-              style: GoogleFonts.bricolageGrotesque(
-                fontWeight: FontWeight.w800,
-                fontSize: 22,
-                color: const Color(0xFF005200),
-              ),
+              // style: GoogleFonts.bricolageGrotesque(
+              //   fontWeight: FontWeight.w800,
+              //   fontSize: 22,
+              //   color: const Color(0xFF005200),
+              // ),
             ),
           ),
           const SizedBox(height: 10),
@@ -114,8 +111,14 @@ class _HomePage extends State<StatefulWidget> {
                           )
                         ],
                       ),
-                      const Text("34\u00B0", style: TextStyle(fontSize: 38),),
-                      const Text("Nắng đẹp", style: TextStyle(fontSize: 20),),
+                      const Text(
+                        "34\u00B0",
+                        style: TextStyle(fontSize: 38),
+                      ),
+                      const Text(
+                        "Nắng đẹp",
+                        style: TextStyle(fontSize: 20),
+                      ),
                     ],
                   ),
                 ),
@@ -127,13 +130,14 @@ class _HomePage extends State<StatefulWidget> {
                     width: 120,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/sunny-image.png"),
-                          fit: BoxFit.cover,
-                        )
-                    ),
+                      image: AssetImage("assets/images/sunny-image.png"),
+                      fit: BoxFit.cover,
+                    )),
                   ),
                 ),
-                const SizedBox(height: 200,),
+                const SizedBox(
+                  height: 200,
+                ),
                 GridView.count(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
@@ -141,11 +145,7 @@ class _HomePage extends State<StatefulWidget> {
                   childAspectRatio: 2,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
-                  children: [
-                    Container(
-                      
-                    )
-                  ],
+                  children: [Container()],
                 )
               ],
             ),
@@ -155,11 +155,8 @@ class _HomePage extends State<StatefulWidget> {
     );
   }
 
-
-
-
-
-  Widget _buildGridItem(IconData icon, String title, String value, Color bgColor) {
+  Widget _buildGridItem(
+      IconData icon, String title, String value, Color bgColor) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -192,6 +189,3 @@ class _HomePage extends State<StatefulWidget> {
     );
   }
 }
-
-
-
