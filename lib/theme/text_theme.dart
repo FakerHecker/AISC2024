@@ -5,5 +5,6 @@ TextTheme getTextTheme() {
     bodyLarge: TextStyle(fontFamily: "Be Vietnam"),
     bodyMedium: TextStyle(fontFamily: "Be Vietnam"),
     bodySmall: TextStyle(fontFamily: "Be Vietnam", fontWeight: FontWeight.w500),
+
   );
 }

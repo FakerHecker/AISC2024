@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planta/pages/garden_page/page_layout.dart';
 import 'package:planta/pages/home/home_view.dart';
+import 'package:planta/pages/login/login_view.dart';
 import 'package:planta/theme/light/light_theme.dart';
 import 'package:provider/provider.dart';
 
