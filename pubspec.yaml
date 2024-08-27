@@ -99,6 +99,16 @@ flutter:
         - asset: assets/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf
     - family: Be Vietnam
       fonts:
-        - asset: assets/fonts/BeVietnam-Regular.ttf
-        - asset: assets/fonts/BeVietnam-Medium.ttf
+        - asset: assets/fonts/BeVietnam/BeVietnam-Regular.ttf
+        - asset: assets/fonts/BeVietnam/BeVietnam-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/BeVietnam/BeVietnam-Light.ttf
+          weight: 300
+        - asset: assets/fonts/BeVietnam/BeVietnam-Medium.ttf
           weight: 500
+        - asset: assets/fonts/BeVietnam/BeVietnam-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/BeVietnam/BeVietnam-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/BeVietnam/BeVietnam-ExtraBold.ttf
+          weight: 800
