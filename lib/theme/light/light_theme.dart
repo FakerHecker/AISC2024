@@ -7,7 +7,6 @@ ThemeData getLightTheme() {
   return ThemeData(
     colorScheme: colorScheme,
     useMaterial3: true,
-    fontFamily: "Bricolage Grotesque",
     cardTheme: CardTheme(color: colorScheme.surfaceContainerHigh),
     textTheme: getTextTheme(),
   );
