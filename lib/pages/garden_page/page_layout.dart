@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planta/components/product_mini_card.dart';
 import 'package:planta/pages/garden_page/sheet_layout.dart';
+import 'package:planta/pages/garden_page/tab_layout.dart';
 
 class GardenPage extends StatelessWidget {
   const GardenPage({super.key});
@@ -25,30 +26,9 @@ class GardenPage extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: ProductMiniCard(
-              title: 'Cây đuôi công',
-              subtitle: '19/08/2024',
-              highlightedText: "4 tháng",
-              actionButtonIcon: Icons.favorite_outline,
-              actionButtonOnPressed: () async {
-                await showModalBottomSheet(
-                  context: context,
-                  showDragHandle: true,
-                  builder: (context) {
-                    return const GardenSheet(
-                      title: "Cây đuôi công",
-                      subtitle: "Trong nhà",
-                      image: AssetImage("assets/images/plant-image.png"),
-                    );
-                  },
-                );
-              },
-            ),
-          ),
-          const Placeholder(),
+        body: const TabBarView(children: [
+          GardenTab(),
+          GardenTab(),
         ]),
       ),
     );
