@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:planta/GradientText.dart';
+import 'package:planta/pages/home/news/new_section.dart';
 import 'package:planta/theme/light/color_scheme.dart';
 import 'package:planta/theme/text_theme.dart';
 import 'package:planta/grid_item.dart';
+
+import 'hint/hint_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -149,7 +152,11 @@ class _HomePage extends State<StatefulWidget> {
                 )
               ],
             ),
-          )
+          ),
+          const SizedBox(height: 10,),
+          NewsSection(),
+          const SizedBox(height: 10,),
+          HintSection()
         ]),
       ),
     );
